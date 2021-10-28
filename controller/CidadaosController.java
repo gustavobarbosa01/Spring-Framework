@@ -55,7 +55,7 @@ public class CidadaosController {
 		cidadaos.setCpf(cidadaosDetails.getCpf());
 		cidadaos.setNome(cidadaosDetails.getNome());
 		cidadaos.setEndereco(cidadaosDetails.getEndereco());
-        cidadaos.setSexo(cidadaosDetails.getSexo());
+       		cidadaos.setSexo(cidadaosDetails.getSexo());
 
 		final Cidadaos updateCidadaos = cidadaosRepository.save(cidadaos);
 		return ResponseEntity.ok(updateCidadaos);
@@ -67,7 +67,7 @@ public class CidadaosController {
 		Cidadaos cidadaos = cidadaosRepository.findById(cidadaosId)
 				.orElseThrow(() -> new ResourceNotFoundException("Cidadaos id nao existente!!! " + cidadaosId));
 
-        cidadaosRepository.delete(cidadaos);
+       		cidadaosRepository.delete(cidadaos);
 		Map<String, Boolean> response = new HashMap<>();
 		response.put("deleted", Boolean.TRUE);
 		return response;
