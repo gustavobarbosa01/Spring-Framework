@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Cidadaos {
 
 	private long id;
-    private String cpf;
+    	private String cpf;
 	private String nome;
 	private String endereco;
 	private String sexo;
@@ -23,7 +23,7 @@ public class Cidadaos {
 	
 	public Cidadaos(String cpf, String nome, String endereco, String sexo) {
 		this.nome = cpf;
-        this.nome = nome;
+        	this.nome = nome;
 		this.endereco = endereco;
 		this.sexo = sexo;
 	}
@@ -37,13 +37,13 @@ public class Cidadaos {
 		this.id = id;
 	}
 	
-    @Column(name = "cpf", nullable = false)
-    public String getCpf(){
-        return cpf;
-    }
-    public void setCpf(String cpf){
-        this.cpf = cpf;
-    }
+	@Column(name = "cpf", nullable = false)
+	public String getCpf(){
+		return cpf;
+	}
+	public void setCpf(String cpf){
+		this.cpf = cpf;
+	}
 
 	@Column(name = "name", nullable = false)
 	public String getNome() {
